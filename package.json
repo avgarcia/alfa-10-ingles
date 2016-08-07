@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/avgarcia/alfa-10-ingles/issues"
   },
-  "homepage": "https://github.com/avgarcia/alfa-10-ingles#readme"
+  "homepage": "https://github.com/avgarcia/alfa-10-ingles#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
