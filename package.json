@@ -1,0 +1,26 @@
+{
+  "name": "alfa_10",
+  "version": "1.0.0",
+  "description": "Academia de Ingles Alfa 10",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avgarcia/alfa-10-ingles.git"
+  },
+  "keywords": [
+    "Alfa10",
+    "academia",
+    "ingles",
+    "academia",
+    "ingles"
+  ],
+  "author": "Antonio Vidal Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avgarcia/alfa-10-ingles/issues"
+  },
+  "homepage": "https://github.com/avgarcia/alfa-10-ingles#readme"
+}
