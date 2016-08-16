@@ -490,7 +490,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#fh5co-services, #fh5co-testimony, #fh5co-explore, #fh5co-faq, #fh5co-team, #fh5co-trusted, #fh5co-footer {
+#fh5co-metodologia, #fh5co-cambridge, #fh5co-cursos, #fh5co-about-us, #fh5co-team, #fh5co-trusted, #fh5co-footer {
   padding: 5em 0;
   @media screen and (max-width: $screen-sm) {
     padding: 2em 0;
@@ -504,17 +504,40 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.fh5co-explore {
+.fh5co-cursos {
   // margin-bottom: 80px;
   padding-bottom: 40px;
 }
 
-.fh5co-explore-bg-color {
+.fh5co-cursos-bg-color {
+  width: 100%;
+  background: $brand-body-color;
+  margin-bottom: 0;
+}
+
+.fh5co-cambridge {
+  // margin-bottom: 80px;
+  padding-bottom: 40px;
+}
+
+.fh5co-cambridge-bg-color {
   width: 100%;
   background: $brand-body-color;
   padding: 80px 0;
   // padding: 80px 40px;
   margin-bottom: 0;
+}
+
+.btn-select-cursos {
+  padding: 10px 20px;
+  background: $brand-secondary;
+  color: $brand-white;
+
+  -webkit-box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.15);
 }
 
 .mt {
@@ -775,8 +798,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.fh5co-services {
-  .box-services {
+.fh5co-metodologia {
+  .box-metodologia {
     position: relative;
     margin-bottom: 70px;
 
