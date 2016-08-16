@@ -1,7 +1,7 @@
 ;(function () {
     'use strict';
 
-    // iPad and iPod detection
+    /* iPad and iPod detection */
     var isiPad = function () {
         return (navigator.platform.indexOf("iPad") != -1);
     };
@@ -13,12 +13,12 @@
         );
     };
 
-    // Parallax
+    /* Parallax */
     var parallax = function () {
         $(window).stellar();
     };
 
-    // Burger Menu
+    /* Burger Menu */
     var burgerMenu = function () {
         $('body').on('click', '.js-fh5co-nav-toggle', function (event) {
             event.preventDefault();
@@ -30,21 +30,7 @@
         });
     };
 
-    var testimonialCarousel = function () {
-        var owl = $('.owl-carousel-fullwidth');
-        owl.owlCarousel({
-            items: 1,
-            loop: true,
-            margin: 0,
-            responsiveClass: true,
-            nav: false,
-            dots: true,
-            smartSpeed: 500,
-            autoHeight: true
-        });
-    };
-
-    // Page Nav
+    /* Page Nav */
     var clickMenu = function () {
         $('#navbar a:not([class="external"])').click(function (event) {
             var section = $(this).data('nav-section'),
@@ -67,7 +53,7 @@
         });
     };
 
-    // Reflect scrolling in navigation
+    /* Reflect scrolling in navigation */
     var navActive = function (section) {
         var $el = $('#navbar > ul');
         $el.find('li').removeClass('active');
@@ -97,7 +83,7 @@
         });
     };
 
-    // Window Scroll
+    /* Window Scroll */
     var windowScroll = function () {
         var lastScrollTop = 0;
 
@@ -119,9 +105,7 @@
         });
     };
 
-    // Animations
-
-    // Home
+    /* Home */
     var homeAnimate = function () {
         if ($('#fh5co-home').length > 0) {
             $('#fh5co-home').waypoint(function (direction) {
@@ -141,70 +125,61 @@
         }
     };
 
+    /* Cursos */
     var cursosAnimate = function () {
-        if ( $('#fh5co-cursos').length > 0 ) {
-            $('#fh5co-cursos .to-animate').each(function( k ) {
+        if ($('#fh5co-cursos').length > 0) {
+            $('#fh5co-cursos .to-animate').each(function (k) {
                 var el = $(this);
 
-                setTimeout ( function () {
+                setTimeout(function () {
                     el.addClass('bounceIn animated');
-                },  k * 200, 'easeInOutExpo' );
+                }, k * 200, 'easeInOutExpo');
             });
         }
     };
 
-    var cambridgeAnimate = function() {
-
+    /* Cambridge */
+    var cambridgeAnimate = function () {
         var cambridge = $('#fh5co-cambridge');
-        if ( cambridge.length > 0 ) {
-
-            cambridge.waypoint( function( direction ) {
-
-                if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-
-
-                    setTimeout(function() {
-                        cambridge.find('.to-animate').each(function( k ) {
+        if (cambridge.length > 0) {
+            cambridge.waypoint(function (direction) {
+                if (direction === 'down' && !$(this.element).hasClass('animated')) {
+                    setTimeout(function () {
+                        cambridge.find('.to-animate').each(function (k) {
                             var el = $(this);
 
-                            setTimeout ( function () {
+                            setTimeout(function () {
                                 el.addClass('fadeInUp animated');
-                            },  k * 200, 'easeInOutExpo' );
-
+                            }, k * 200, 'easeInOutExpo');
                         });
                     }, 200);
 
-                    setTimeout(function() {
-                        cambridge.find('.to-animate-2').each(function( k ) {
+                    setTimeout(function () {
+                        cambridge.find('.to-animate-2').each(function (k) {
                             var el = $(this);
 
-                            setTimeout ( function () {
+                            setTimeout(function () {
                                 el.addClass('fadeInLeft animated');
-                            },  k * 200, 'easeInOutExpo' );
-
+                            }, k * 200, 'easeInOutExpo');
                         });
                     }, 700);
 
-                    setTimeout(function() {
-                        cambridge.find('.to-animate-3').each(function( k ) {
+                    setTimeout(function () {
+                        cambridge.find('.to-animate-3').each(function (k) {
                             var el = $(this);
 
-                            setTimeout ( function () {
+                            setTimeout(function () {
                                 el.addClass('fadeInRight animated');
-                            },  k * 200, 'easeInOutExpo' );
-
+                            }, k * 200, 'easeInOutExpo');
                         });
                     }, 1000);
-
-
                     $(this.element).addClass('animated');
-
                 }
-            } , { offset: '80%' } );
-
+            }, {offset: '80%'});
         }
     };
 
+    /* Contactanos */
     var gettingStartedAnimate = function () {
         var started = $('.getting-started-1');
         if (started.length > 0) {
@@ -235,6 +210,7 @@
         }
     };
 
+    /* Contactanos 2 */
     var gettingStarted2Animate = function () {
         var started = $('.getting-started-2');
         if (started.length > 0) {
@@ -265,6 +241,7 @@
         }
     };
 
+    /* Metodología */
     var metodologiaAnimate = function () {
         var metodologia = $('#fh5co-metodologia');
         if (metodologia.length > 0) {
@@ -297,41 +274,30 @@
         }
     };
 
-    // About Us
-    var aboutAnimate = function() {
-
-        if ( $('#about-us').length > 0 ) {
-            $('#about-us .to-animate').each(function( k ) {
-
+    /* About Us */
+    var aboutAnimate = function () {
+        if ($('#about-us').length > 0) {
+            $('#about-us .to-animate').each(function (k) {
                 var el = $(this);
 
-                setTimeout ( function () {
+                setTimeout(function () {
                     el.addClass('fadeInUp animated');
-                },  k * 200, 'easeInOutExpo' );
-
+                }, k * 200, 'easeInOutExpo');
             });
         }
-
     };
-    var aboutWayPoint = function() {
-
-        if ( $('#about-us').length > 0 ) {
-            $('#about-us').waypoint( function( direction ) {
-
-                if( direction === 'down' && !$(this).hasClass('animated') ) {
-
-
+    var aboutWayPoint = function () {
+        if ($('#about-us').length > 0) {
+            $('#about-us').waypoint(function (direction) {
+                if (direction === 'down' && !$(this).hasClass('animated')) {
                     setTimeout(aboutAnimate, 200);
-
-
                     $(this.element).addClass('animated');
-
                 }
-            } , { offset: '95%' } );
+            }, {offset: '95%'});
         }
-
     };
 
+    /* Certificados */
     var trustedAnimate = function () {
         var trusted = $('#fh5co-trusted');
         if (trusted.length > 0) {
@@ -364,6 +330,7 @@
         }
     };
 
+    /* Footer */
     var footerAnimate = function () {
         var footer = $('#fh5co-footer');
         if (footer.length > 0) {
@@ -385,7 +352,6 @@
         }
     };
 
-    // Document on load.
     $(function () {
         parallax();
         burgerMenu();
@@ -393,7 +359,6 @@
         windowScroll();
         navigationSection();
 
-        // Animations
         homeAnimate();
         cursosAnimate();
         cambridgeAnimate();
