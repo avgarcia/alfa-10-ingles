@@ -34,7 +34,8 @@
     var clickMenu = function () {
         $('#navbar a:not([class="external"])').click(function (event) {
             var section = $(this).data('nav-section'),
-                navbar = $('#navbar');
+                navbar = $('#navbar'),
+                link = $(this).data('link');
 
             if ($('[data-section="' + section + '"]').length) {
                 $('html, body').animate({
@@ -48,8 +49,10 @@
                 $('.js-fh5co-nav-toggle').removeClass('active');
             }
 
-            event.preventDefault();
-            return false;
+            if (!link) {
+                event.preventDefault();
+                return false;
+            }
         });
     };
 
