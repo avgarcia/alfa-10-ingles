@@ -1,3 +1,4 @@
+var browserSync = require('browser-sync').create();
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
@@ -5,8 +6,12 @@ var sourcemaps = require('gulp-sourcemaps');
 gulp.task('default', function () {
 });
 
-gulp.task('watch', function () {
-    gulp.watch('./sass/**/*.scss', ['sass']);
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
 });
 
 gulp.task('sass', function () {

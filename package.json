@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/avgarcia/alfa-10-ingles#readme",
   "devDependencies": {
+    "browser-sync": "^2.11.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0"
