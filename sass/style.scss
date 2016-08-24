@@ -5,8 +5,8 @@ $grid-gutter-width: 40px !default;
 $border-radius-base: 4px !default;
 $padding-base-vertical: 14px !default;
 
-$brand-primary: #263a8c !default;
-$brand-secondary: #1fb5f6 !default;
+$brand-primary: #2d41b5 !default;
+$brand-secondary: #02147b !default;
 
 $brand-white: #fff;
 $brand-black: #000;
@@ -78,6 +78,11 @@ $form-group-margin-bottom: 30px !default;
   font-style: normal;
 }
 
+@font-face {
+  font-family: Battlestar;
+  src: url('../fonts/BATTLEST.TTF') format("truetype");
+}
+
 @mixin icomoon() {
   font-family: 'icomoon', sans-serif;
   speak: none;
@@ -128,6 +133,7 @@ a {
 }
 
 p {
+  text-align: justify;
   margin-bottom: 1.5em;
   font-size: 16px;
 }
@@ -279,12 +285,12 @@ h1, h2, h3, h4, h5, h6 {
   .navbar-brand {
     float: left;
     display: block;
-    font-size: 24px;
-    font-weight: 700;
-    padding-left: 0;
+    font-size: 40px;
     color: #f8f8f8;
     text-transform: uppercase;
     letter-spacing: 3px;
+    font-family: Battlestar;
+    padding: 33px 15px;
 
     > span {
       color: $brand-primary;
@@ -391,6 +397,36 @@ h1, h2, h3, h4, h5, h6 {
         font-style: normal;
       }
     }
+  }
+}
+
+#fh5co-home-alt {
+  background-color: transparent;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  background-color: $brand-primary;
+  color: #fff;
+
+  .gradient {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: rgba(0, 0, 0, .3);
+  }
+
+  &, .text-wrap {
+    height: 350px;
+  }
+
+  .text-wrap {
+    display: table;
+    width: 100%;
+    position: relative;
+    z-index: 4;
   }
 }
 
@@ -503,9 +539,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.fh5co-cursos-bg-color {
+.fh5co-cursos {
   width: 100%;
   background: $brand-body-color;
+  h3 {
+    margin-top: 15px;
+  }
+  p {
+    text-align: left;
+  }
 }
 
 .fh5co-cambridge-bg-color {
@@ -515,28 +557,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #fh5co-contact {
-  .contact-info{
+  .contact-info {
     margin: 0;
     padding: 0;
-    li{
-      // font-size: 16px;
+    li {
       list-style: none;
       margin: 0 0 20px 0;
       position: relative;
       padding-left: 40px;
 
-      i{
+      i {
         position: absolute;
         top: .3em;
         left: 0;
         font-size: 22px;
-        color: rgba($brand-black,.3);
+        color: $brand-secondary;
       }
-      a{
-        font-weight: 400!important;
-        color: rgba($brand-black,.3)
+      a {
+        font-weight: 400 !important;
+        color: #7f7f7f;
       }
-
     }
   }
   .form-control {
@@ -546,14 +586,14 @@ h1, h2, h3, h4, h5, h6 {
     -o-box-shadow: none;
     box-shadow: none;
     border: none;
-    border: 1px solid rgba(0,0,0,.1);
+    border: 1px solid rgba(0, 0, 0, .1);
     font-size: 18px;
 
     font-weight: 400;
     @include border-radius(0px);
 
     &:focus, &:active {
-      border-bottom: 1px solid rgba(0,0,0,.5);
+      border-bottom: 1px solid rgba(0, 0, 0, .5);
     }
 
   }
@@ -614,6 +654,15 @@ h1, h2, h3, h4, h5, h6 {
         color: $brand-secondary;
       }
     }
+  }
+}
+
+.brand-alfa10 {
+  font-family: Battlestar;
+  font-weight: normal !important;
+
+  > span {
+    color: $brand-primary;
   }
 }
 
@@ -695,6 +744,7 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 }
+
 .partner-logo {
   margin-bottom: 30px;
   float: left;
