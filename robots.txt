@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://alfa10english.com/sitemap.xml
